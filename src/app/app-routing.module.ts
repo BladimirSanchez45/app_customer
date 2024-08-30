@@ -24,8 +24,8 @@ const routes: Routes = [
   { path: 'descripcion', component: DescripcionComponent, canActivate: [AuthGuard] },
   { path: 'codigo', component: CodigoComponent, canActivate: [AuthGuard] },
   { path: 'instrucciones', component: InstruccionesComponent, canActivate: [AuthGuard] },
-  { path: '', redirectTo: '/cotizar', pathMatch: 'full' },
-  { path: '**', redirectTo: '/cotizar' }
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '**', redirectTo: '/login' }
 ];
 
 @NgModule({
