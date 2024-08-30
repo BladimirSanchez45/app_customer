@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, tap, BehaviorSubject } from 'rxjs';
 import { Router } from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
+import { environment } from 'src/environments/environment.development';
 
 interface User {
   email: string;
@@ -15,7 +16,7 @@ interface User {
   providedIn: 'root'
 })
 export class AuthLoginService {
-  private apiUrl = 'http://localhost:3000/api/v1/customer'; 
+  private apiUrl = environment.apiUrl; 
   private userRole = new BehaviorSubject<string | null>(null);
   userRole$ = this.userRole.asObservable();
 
