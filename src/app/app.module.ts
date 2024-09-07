@@ -43,7 +43,7 @@ export function tokenGetter() {
     CodigoComponent,
     InstruccionesComponent,
     HistorialComponent,
-    ForgotPassComponent
+    ForgotPassComponent,
   ],
   imports: [
     BrowserModule,

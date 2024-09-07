@@ -19,13 +19,10 @@ export class CodigoComponent implements OnInit {
     this.qrCodeData = this.enviosDataService.getQRCodeData();
     if (!this.qrCodeData) {
       console.error('No se encontraron datos para el código QR');
-      // Aquí podrías manejar el caso de que no haya datos, por ejemplo, redirigiendo al usuario
-      // this.router.navigate(['/cotizar']);
     }
   }
 
   confirmarQr() {
-    // Limpia los datos del QR después de confirmar
     this.enviosDataService.clearQRCodeData();
     this.router.navigate(['/instrucciones']);
   }
